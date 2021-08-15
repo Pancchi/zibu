@@ -38,7 +38,7 @@ state={
             
 					<Switch>
 						<Route path="/assignment1" component={CreateProject} />
-            <Route path="/" component={CreateProject} />
+            <Route exact={true} path="/" component={CreateProject} />
 						<Route path="/Preview" component={PreviewProject} />
             <Route path="/assignment" component={AssignmentTwo} />
             <Route path="/Assignment2" component={Assign} />
