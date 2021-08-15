@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route ,Link} from 'react-router-dom';
+import CreateProject from './createProject/CreateProject' ;
+import PreviewProject from './previewProject/PreviewProject';
+import  AssignmentTwo  from "./AssignmentTwo/AssignmentTwo";
+import Assign from './AssignmentTwo/assign'
+import "./css/site.min.css";
+ class App extends Component {
+  constructor(props) {
+    super(props);
+   
+}
+state={
+  
 }
 
-export default App;
+
+
+  render() {
+    return (
+      <div>
+        <Router>
+        <Link to="/Assignment2">
+     <button className="btn btn-outline-primary btnstyle2">
+        <p>Assignment 2</p>
+     </button>
+ </Link>
+        <Link to="/assignment1">
+     <button className="btn btn-outline-primary btnstyle2">
+        <p>Assignment 1</p>
+     </button>
+ </Link>
+ 
+        
+              
+            
+					<Switch>
+						<Route path="/assignment1" component={CreateProject} />
+						<Route path="/Preview" component={PreviewProject} />
+            <Route path="/assignment" component={AssignmentTwo} />
+            <Route path="/Assignment2" component={Assign} />
+						
+					</Switch>
+				</Router>
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = state => ({
+	
+})
+
+const mapDispatchToProps = dispatch => ({})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
