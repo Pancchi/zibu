@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/site.min.css";
+
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { DropzoneArea } from "material-ui-dropzone";
 import { saveImageAction } from "../action/assignmentOneAction";

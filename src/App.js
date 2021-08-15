@@ -6,7 +6,7 @@ import CreateProject from './createProject/CreateProject' ;
 import PreviewProject from './previewProject/PreviewProject';
 import  AssignmentTwo  from "./AssignmentTwo/AssignmentTwo";
 import Assign from './AssignmentTwo/assign'
-import "./css/site.min.css";
+import "./App.css";
  class App extends Component {
   constructor(props) {
     super(props);
@@ -38,6 +38,7 @@ state={
             
 					<Switch>
 						<Route path="/assignment1" component={CreateProject} />
+            <Route path="/" component={CreateProject} />
 						<Route path="/Preview" component={PreviewProject} />
             <Route path="/assignment" component={AssignmentTwo} />
             <Route path="/Assignment2" component={Assign} />

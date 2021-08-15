@@ -1,7 +1,7 @@
 
 
 import React, { Component } from "react";
-import "../css/site.min.css";
+
 import { saveImageAction } from "../action/assignmentOneAction";
 import {connect} from "react-redux";
 import Card from '@material-ui/core/Card';
