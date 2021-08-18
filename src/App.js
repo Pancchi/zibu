@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Switch, Route ,Link} from 'react-router-dom';
 import CreateProject from './createProject/CreateProject' ;
 import PreviewProject from './previewProject/PreviewProject';
 import  AssignmentTwo  from "./AssignmentTwo/AssignmentTwo";
-import Assign from './AssignmentTwo/assign'
+import Assign from './AssignmentTwo/assign';
+import AssignThree from "./Assignment3/AssignThree";
 import "./App.css";
  class App extends Component {
   constructor(props) {
@@ -22,6 +23,11 @@ state={
     return (
       <div>
         <Router>
+        <Link to="/Assignment3">
+     <button className="btn btn-outline-primary btnstyle2">
+        <p>Assignment 3</p>
+     </button>
+ </Link>
         <Link to="/Assignment2">
      <button className="btn btn-outline-primary btnstyle2">
         <p>Assignment 2</p>
@@ -42,6 +48,7 @@ state={
 						<Route path="/Preview" component={PreviewProject} />
             <Route path="/assignment" component={AssignmentTwo} />
             <Route path="/Assignment2" component={Assign} />
+            <Route path="/Assignment3" component={AssignThree} />
 						
 					</Switch>
 				</Router>
