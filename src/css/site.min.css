@@ -35,3 +35,15 @@ body{
     background-color: #485e9b9d  !important;
     color: white !important;
   }
+  .hiddeninput {
+    background: none;
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+    border: none;
+}
+
+.hiddeninput:hover {
+    background: white;
+    color: black;
+    border: 3px;
+}
